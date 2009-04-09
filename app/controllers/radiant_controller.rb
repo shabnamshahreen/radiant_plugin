@@ -1,6 +1,4 @@
-require_dependency 'radiant'
-
-class ApplicationController < ActionController::Base
+class RadiantController < ApplicationController
   include LoginSystem
   include Radiant::LegacyRoutes
   

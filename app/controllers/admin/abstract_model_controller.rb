@@ -1,4 +1,4 @@
-class Admin::AbstractModelController < ApplicationController
+class Admin::AbstractModelController < RadiantController
   attr_accessor :cache
   
   def self.inherited(subclass)

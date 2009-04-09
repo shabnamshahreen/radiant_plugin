@@ -1,4 +1,4 @@
-module ApplicationHelper
+module RadiantHelper
   include LocalTime
   include Admin::RegionsHelper
   include Radiant::LegacyRoutes

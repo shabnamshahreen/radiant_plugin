@@ -1,4 +1,4 @@
-class SiteController < ApplicationController
+class SiteController < RadiantController
   session :off
   skip_before_filter :verify_authenticity_token
   

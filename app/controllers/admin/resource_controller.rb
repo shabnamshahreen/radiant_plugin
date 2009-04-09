@@ -1,4 +1,4 @@
-class Admin::ResourceController < ApplicationController
+class Admin::ResourceController < RadiantController
   extend Radiant::ResourceResponses
   
   helper_method :model, :current_object, :models, :current_objects, :model_symbol, :plural_model_symbol, :model_class, :model_name, :plural_model_name

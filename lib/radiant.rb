@@ -1,18 +1,24 @@
-RADIANT_ROOT = File.expand_path(File.join(File.dirname(__FILE__), "..")) unless defined? RADIANT_ROOT
+module Radiant
+  module Version
+    Major = '0'
+    Minor = '7'
+    Tiny  = '1'
 
-unless defined? Radiant::Version
-  module Radiant
-    module Version
-      Major = '0'
-      Minor = '7'
-      Tiny  = '1'
-
-      class << self
-        def to_s
-          [Major, Minor, Tiny].join('.')
-        end
-        alias :to_str :to_s
+    class << self
+      def to_s
+        [Major, Minor, Tiny].join('.')
       end
+      alias :to_str :to_s
+    end
+  end
+
+  class << self
+    def plugin?
+      File.dirname(__FILE__).match(/vendor/)
+    end
+    
+    def loaded_via_gem?
+      !plugin?
     end
   end
 end

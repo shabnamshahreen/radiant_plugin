@@ -36,7 +36,7 @@
           This site was made with Ruby and is powered by 
           %a{:href=>"http://radiantcms.org"} Radiant CMS
           version 
-          = Radiant.loaded_via_gem? ? "#{Radiant::Version} (gem)." : "#{Radiant::Version}."
+          = Radiant::Version
         %p#site-links
           - if logged_in?
             - if admin?
